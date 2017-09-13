@@ -13,7 +13,7 @@ service experimental.minimal_create
 
 object create_obj
     #function void DriveSpeed(int16 velocity1, int16 velocity2,int16 velocity3)
-    #function void SpeedUp(int16 velocity1, int16 velocity2,int16 velocity3):
+    function void SpeedUp(int16 velocity11, int16 velocity12,int16 velocity13):
 end object
 """
 
@@ -54,18 +54,18 @@ class create_impl(object):
         self.ESC1speed = velocity1
         self.ESC2speed = velocity2
         self.ESC3speed = velocity3
-        pi.set_servo_pulsewidth(ESC1, velocity1)
-        pi.set_servo_pulsewidth(ESC2, velocity2)
-        pi.set_servo_pulsewidth(ESC3, velocity3)
+        pi.set_servo_pulsewidth(ESC1, self.ESC1speed)
+        pi.set_servo_pulsewidth(ESC2, self.ESC2speed)
+        pi.set_servo_pulsewidth(ESC3, self.ESC3speed)
         print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n" %(velocity1 , velocity2 , velocity3) )
 
-    def SpeedUp(self, velocity1, velocity2,velocity3):
-        self.ESC1speed = self.ESC1speed + velocity1
-        self.ESC2speed = self.ESC2speed + velocity2 
-        self.ESC3speed = self.ESC3speed + velocity3
-        pi.set_servo_pulsewidth(ESC1, velocity1)
-        pi.set_servo_pulsewidth(ESC2, velocity2)
-        pi.set_servo_pulsewidth(ESC3, velocity3)
+    def SpeedUp(self, velocity11, velocity12,velocity13):
+        self.ESC1speed = self.ESC1speed + velocity11
+        self.ESC2speed = self.ESC2speed + velocity12 
+        self.ESC3speed = self.ESC3speed + velocity13
+        pi.set_servo_pulsewidth(ESC1, self.ESC1speed)
+        pi.set_servo_pulsewidth(ESC2, self.ESC2speed)
+        pi.set_servo_pulsewidth(ESC3, self.ESC3speed)
         print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n" %(velocity1 , velocity2 , velocity3) )
 
 
