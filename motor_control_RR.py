@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import RobotRaconteur as RR
 RRN=RR.RobotRaconteurNode.s
-#import threading
+import threading
 #import serial
 import struct
 import os     #importing os library so as to communicate with the system
