@@ -12,8 +12,8 @@ minimal_create_interface="""
 service experimental.minimal_create
 
 object create_obj
-    function void DriveSpeed(int16 velocity1, int16 velocity2,int16 velocity3)
-    function void SpeedUp(int16 velocity1, int16 velocity2,int16 velocity3):
+    #function void DriveSpeed(int16 velocity1, int16 velocity2,int16 velocity3)
+    #function void SpeedUp(int16 velocity1, int16 velocity2,int16 velocity3):
 end object
 """
 
