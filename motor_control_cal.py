@@ -21,11 +21,11 @@ def calibrate():   #This is the auto calibration procedure of a normal ESC
 
 		if inp == "n":
 			pi.set_servo_pulsewidth(ESC, stop_value)
-        	print("wait for it, wiat for it")
+			print("wait for it, wiat for it")
         	time.sleep(2)
         	print("please be patient")
         	time.sleep(2)
-		elif inp == "c":
+        elif inp == "c":
 			pi.set_servo_pulsewidth(ESC, 0)
 			print("Disconnect the battery and press Enter")
 			inp = raw_input()
