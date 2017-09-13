@@ -8,6 +8,17 @@ import os     #importing os library so as to communicate with the system
 import time   #importing time library to make Rpi wait because its too impatient 
 #os.system ("sudo pigpiod") #Launching GPIO library
 
+minimal_create_interface="""
+service experimental.minimal_create
+
+object create_obj
+    function void Drive(int16 velocity, int16 radius)
+    function void DriveSpeed(int16 velocity1, int16 velocity2,int16 velocity3)
+    function void SpeedUp(int16 velocity1, int16 velocity2,int16 velocity3):
+end object
+"""
+
+
 time.sleep(1)
 import pigpio #importing GPIO library
 ESC1=4  #Connect the ESC in this GPIO pin 
@@ -83,7 +94,9 @@ RRN.RegisterServiceType(minimal_create_interface)
 create_inst=create_impl()
 
 #Register the service
-RRN.RegisterService("MotorController","experimental.minimal_create.MotorController_obj",create_inst)
+RRN.RegisterService("Create","experimental.minimal_create.create_obj",create_inst)
+
+
 
 #Wait for program exit to quit
 raw_input("Press enter to quit")
