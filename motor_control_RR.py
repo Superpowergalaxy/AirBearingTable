@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import RobotRaconteur as RR
 RRN=RR.RobotRaconteurNode.s
 #import threading
