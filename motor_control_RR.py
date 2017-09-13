@@ -13,7 +13,7 @@ service experimental.minimal_create
 
 object create_obj
     #function void DriveSpeed(int16 velocity1, int16 velocity2,int16 velocity3)
-    function void SpeedUp(int16 velocity11, int16 velocity12,int16 velocity13):
+    function void SpeedUp(int16 velocity11, int16 velocity12,int16 velocity13)
 end object
 """
 
