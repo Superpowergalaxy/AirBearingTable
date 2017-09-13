@@ -37,7 +37,7 @@ class create_impl(object):
         time.sleep(2)
         print("please be patient")
         time.sleep(2)
-        print("started \n ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n", %(velocity1 , velocity2 , velocity3) )
+        print("started \n ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n" %(velocity1 , velocity2 , velocity3) )
 
 
     def DriveSpeed(self, velocity1, velocity2,velocity3):
@@ -47,16 +47,16 @@ class create_impl(object):
         pi.set_servo_pulsewidth(ESC1, velocity1)
         pi.set_servo_pulsewidth(ESC2, velocity2)
         pi.set_servo_pulsewidth(ESC3, velocity3)
-        print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n", %(velocity1 , velocity2 , velocity3) )
+        print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n" %(velocity1 , velocity2 , velocity3) )
 
     def SpeedUp(self, velocity1, velocity2,velocity3):
         self.ESC1speed = self.ESC1speed + velocity1
-        self.ESC2speed = self.ESC2speed + velocity2
+        self.ESC2speed = self.ESC2speed + velocity2 
         self.ESC3speed = self.ESC3speed + velocity3
         pi.set_servo_pulsewidth(ESC1, velocity1)
         pi.set_servo_pulsewidth(ESC2, velocity2)
         pi.set_servo_pulsewidth(ESC3, velocity3)
-        print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n", %(velocity1 , velocity2 , velocity3) )
+        print(" ESC1 = %d \n ESC1 = %d \n ESC1 = %d \n" %(velocity1 , velocity2 , velocity3) )
 
 
 
