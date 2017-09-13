@@ -1,11 +1,11 @@
 import RobotRaconteur as RR
 RRN=RR.RobotRaconteurNode.s
-import threading
-import serial
+#import threading
+#import serial
 import struct
 import os     #importing os library so as to communicate with the system
 import time   #importing time library to make Rpi wait because its too impatient 
-os.system ("sudo pigpiod") #Launching GPIO library
+#os.system ("sudo pigpiod") #Launching GPIO library
 
 time.sleep(1)
 import pigpio #importing GPIO library
